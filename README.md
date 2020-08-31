@@ -1,2 +1,2 @@
 # PDF-Searcher
-Upload PDF and Search PDF by Keyword in PDF.
+Upload PDF and Search PDF by Keyword.
