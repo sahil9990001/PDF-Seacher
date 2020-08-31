@@ -1,0 +1,28 @@
+{% extends 'base.html'%} {% block title %} Home{% endblock title %} {% block body %}
+
+
+
+<div class="container my-3 justify-content-center">
+    <div class="row justify-content-center no-gutters border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative ">
+        <div class="col p-4 d-flex justify-content-center flex-column position-static " style="background-color: antiquewhite; ">
+            <h1 class="row justify-content-center">PDF Searcher</h1>
+            <form method="GET" action="/search" class="form-inline my-2 my-lg-0 justify-content-center">
+                <input class="form-control mr-sm-2 " type="search " id="query" name="query" placeholder="Search " aria-label="Search ">
+                <button class="btn btn-outline-success my-2 my-sm-0 " type="submit ">Search</button>
+            </form>
+            <div class="container my-3 justify-content-center">
+                <form enctype="multipart/form-data" action="/" method="post">
+                    <!-- Do not forget to a
+                    dd: enctype="multipart/form-data" -->
+                    {% csrf_token %} {{ form.as_p }}
+                    <!-- <input type="file" class="form-control" id='fieldName' name="fieldName" multiple /> -->
+                    <input type="submit" class="btn btn-primary" value="Upload Pdf">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}

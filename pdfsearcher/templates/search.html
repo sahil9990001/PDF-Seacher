@@ -1,0 +1,35 @@
+{% extends 'base.html'%} {% block title %} Search{% endblock title %} {% block body %}
+
+
+
+<div class="container my-3 justify-content-center">
+    <div class="row justify-content-center no-gutters border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative ">
+        <div class="col p-4 d-flex justify-content-center flex-column position-static " style="background-color: antiquewhite; ">
+            <h3>SEARCHED PDF</h3>
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th>PDF BY NAMES</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {% for post in allposts %}
+                    <tr>
+                        <td>{{post.PDF}}</td>
+                        <td>
+                            <a href="{{post.PDF.url}}" class="btn btn-primary btn-sm">DownLoad</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock body %}
